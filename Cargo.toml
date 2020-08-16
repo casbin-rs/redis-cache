@@ -1,0 +1,13 @@
+[package]
+name = "redis-cache"
+version = "0.1.0"
+authors = ["Cheng JIANG <jiang.cheng@vip.163.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+casbin = { git = "https://github.com/casbin/casbin-rs", branch = "release-v2.0.0", features = ["cached"] }
+redis = { version = "0.17.0", features = ["script"] }
+serde = { version = "1.0.114", features = ["derive"] }
+serde_json = "1.0.57"
