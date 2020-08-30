@@ -68,6 +68,7 @@ where
                 .query::<String>(&mut self.conn);
         }
     }
+
     fn clear(&mut self) {
         let cache_key = format!("{}::*", CACHE_PREFIX);
 
