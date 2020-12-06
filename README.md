@@ -7,7 +7,7 @@ A shared memory cache for casbin-rs, backed by redis.
 ```rust
 [dependencies]
 casbin = { version = "2.0.1", default-features = false, features = ["runtime-async-std", "logging", "cached"] }
-redis-cache = { version = "0.1.0" }
+redis-cache = { version = "0.2.0" }
 async-std = { version = "1.5.0", features = ["attributes"] }
 ```
 
