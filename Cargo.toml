@@ -1,24 +1,24 @@
 [package]
-name = "redis-cache"
-version = "0.1.0"
-authors = ["Cheng JIANG <jiang.cheng@vip.163.com>"]
+authors     = ["Cheng JIANG <jiang.cheng@vip.163.com>"]
 description = "A shared cache designed for casbin-rs"
-homepage = "https://casbin.org/"
-repository = "https://github.com/casbin-rs/redis-cache"
-license = "Apache-2.0"
-edition = "2018"
-keywords = ["casbin", "cache"]
+edition     = "2018"
+homepage    = "https://casbin.org/"
+keywords    = ["casbin", "cache"]
+license     = "Apache-2.0"
+name        = "redis-cache"
+repository  = "https://github.com/casbin-rs/redis-cache"
+version     = "0.2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-casbin = { version = "2.0.1", default-features = false, features = ["cached"] }
-redis = { version = "0.17.0", features = ["script"] }
-serde = { version = "1.0.114", features = ["derive"] }
+casbin     = { version = "2.0.1", default-features = false, features = ["cached"] }
+redis      = { version = "0.18.0" }
+serde      = { version = "1.0.114", features = ["derive"] }
 serde_json = "1.0.57"
 
 [features]
 default = ["runtime-async-std"]
 
-runtime-tokio = ["casbin/runtime-tokio"]
 runtime-async-std = ["casbin/runtime-async-std"]
+runtime-tokio     = ["casbin/runtime-tokio"]
