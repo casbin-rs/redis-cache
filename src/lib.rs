@@ -85,7 +85,7 @@ where
     fn clear(&mut self) {
         let _ = redis::cmd("DEL")
             .arg(CACHE_HKEY)
-            .query::<String>(&mut self.conn);
+            .query::<bool>(&mut self.conn);
     }
 }
 
